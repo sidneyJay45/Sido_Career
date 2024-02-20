@@ -15,14 +15,22 @@
     
 
   </head>
-  <body>  
+  <body> 
+    {% include 'nav.html' %}
     <div class='container'>
      <h1 class = "text-center mt-2 mb-4">Cedo Careers</h1>
      <img class ='img-fluid' id="banner" src="static/banner.jpg" 
       ">
      <h2 class = 'text-center'>About Cedo</h2>
-     <p class = 'lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-     </p>
+    
+       <div class="row">
+       <div class="col-6">
+         <p class='lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       </div>
+       <div class="col-6">
+         <img src="static/static/people.jpg" class="img-fluid" style="height: 320px; border-radius: 4px;">
+       </div>
+       
       <h2 class = 'text-center mt-2 mb-4'>Open Positions</h2>
       <div>{% for job in jobs %}
              {% include 'jobitem.html' %}
@@ -30,8 +38,9 @@
       </div>
       
       <div class = 'text-center'>
-      <button class="btn btn-primary btn-lg">Contact us</button>
+      <a class="btn btn-primary btn-lg" href="mailto:hello@Cedo.ai?subject=QUESTION%20ABOUT%20JOB%20OPENINGS&body=My%20name%3A%3Cmy%20name%3E%0D%0AMy%20Question%20%3A%3Cmy%20question%20here%3E">Contact us</a>
       <p class='mt-2'>Copyright 2024</p>
     </div>
+       {% include 'footer.html' %}
   </body>
 </html>
